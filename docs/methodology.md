@@ -1,0 +1,32 @@
+# Imprint methodology map
+
+Mission: [Beyond the Chatbot](https://build.doo.ooo/challenges/beyond-the-chatbot), live brief reviewed October 17, 2026.
+
+```mermaid
+flowchart LR
+ A[Verify mission] --> B[Choose one real job]
+ B --> C[Novelty: paper proof and margin annotation]
+ C --> D[Infer one useful edit with genuine AI]
+ D --> E[Stage exact replacement for human review]
+ E --> F[Apply, redirect, keep or undo]
+ F --> G[Check real provider, safety and recovery]
+ G --> H[Publish source, demo and comparison]
+ H --> I[Record walkthrough and submit]
+ G -->|failed check| D
+```
+
+The job is a copy editor preparing a readable adaptation of a short text. The document is the interface. The system initiates a proposed edit when a proof opens or its editorial direction changes; it does not wait for a conversational instruction. Only one anchored edit and the reason to consider it are surfaced. No chat transcript, metric cards or task dashboard.
+
+Novelty relative to earlier entries: Threshold controls authority; Relay Trust delegates credentials; Pivot adapts execution plans; Recollect manages uncertain memory; Rehearse simulates SQL effects. Imprint performs direct document editing through a paper proof, inline marks and a margin note. Reusing authenticated transport does not reuse their product, domain or UI.
+
+## Gates
+
+1. Live mission and source excerpt verified. Complete.
+2. One exact edit, document/version binding, protected wording and reversible history. Complete.
+3. Genuine intent inference from document, direction and keep decisions; no model tools or automatic application. Actual local and public HTTP verification complete.
+4. Wrong-guess recovery through Keep original, a changed direction, and exact undo; stale/protected/number-changing patches refused. Automated and actual-model HTTP checks pass; final public browser review in progress.
+5. Browser workflow, clean clone, source/credential scan, public Site and repository. Public Site v1 and deployment scan complete. Local browser patch/undo and mobile width verified; public browser and clean archive finishing.
+6. Continuous walkthrough, comparison image, architecture, <=300-word thesis and factual notes. Pending.
+7. Authorized DOO submission with visible saved-entry proof retained locally. Pending.
+
+The text is real public-domain literary material, not lorem ipsum. It is an editorial adaptation, never represented as Austen's revised original. User imports are held on this browser; generating a suggestion sends the current text and editing context to the approved DeepSeek provider through the operator's PC. No external publication of imported writing occurs automatically.

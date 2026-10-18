@@ -1,0 +1,47 @@
+{
+  "verifiedAt": "2026-10-18T04:39:13.066Z",
+  "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+  "scope": "Two genuine DeepSeek calls; actual HTTP transport. Application and restoration assertions use the actual returned proposal; browser UI is verified separately.",
+  "first": {
+    "version": 1,
+    "baseText": "It is a truth universally acknowledged, that a single man in possession of a good fortune must be in want of a wife.\n\nHowever little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families, that he is considered as the rightful property of some one or other of their daughters.\n\n“My dear Mr. Bennet,” said his lady to him one day, “have you heard that Netherfield Park is let at last?”\n\nMr. Bennet replied that he had not.\n\n“But it is,” returned she; “for Mrs. Long has just been here, and she told me all about it.”\n\nMr. Bennet made no answer.\n\n“Do not you want to know who has taken it?” cried his wife, impatiently.\n\n“You want to tell me, and I have no objection to hearing it.”",
+    "suggestion": {
+      "decision": "edit",
+      "before": "However little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families, that he is considered as the rightful property of some one or other of their daughters.",
+      "after": "However little his feelings or views are known when he first enters a neighbourhood, the surrounding families hold this truth so firmly that they consider him the rightful property of one or another of their daughters.",
+      "reason": "Rewrites the inverted, passive opening clause into direct subject–verb order and replaces the archaic 'some one or other' so a first-time reader can follow who is doing the considering.",
+      "inferredIntent": "Clarify the second paragraph's convoluted syntax while preserving Austen's ironic point that families treat eligible men as property."
+    },
+    "model": "deepseek-v4-flash",
+    "usage": {
+      "inputTokens": 657,
+      "outputTokens": 1005,
+      "cacheReadTokens": 0
+    }
+  },
+  "redirected": {
+    "version": 1,
+    "baseText": "It is a truth universally acknowledged, that a single man in possession of a good fortune must be in want of a wife.\n\nHowever little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families, that he is considered as the rightful property of some one or other of their daughters.\n\n“My dear Mr. Bennet,” said his lady to him one day, “have you heard that Netherfield Park is let at last?”\n\nMr. Bennet replied that he had not.\n\n“But it is,” returned she; “for Mrs. Long has just been here, and she told me all about it.”\n\nMr. Bennet made no answer.\n\n“Do not you want to know who has taken it?” cried his wife, impatiently.\n\n“You want to tell me, and I have no objection to hearing it.”",
+    "suggestion": {
+      "decision": "edit",
+      "before": "“But it is,” returned she; “for Mrs. Long has just been here, and she told me all about it.”",
+      "after": "“But it is,” she returned; “for Mrs. Long has just been here, and she told me all about it.”",
+      "reason": "Reorders the inverted dialogue tag to the natural 'she returned,' clearing a small syntactic stumble while preserving the period diction and Mrs. Bennet's eager tone.",
+      "inferredIntent": "Preserve Austen's ironic wit and formal diction, making only a minimal structural adjustment where inverted syntax slows a first-time reader."
+    },
+    "model": "deepseek-v4-flash",
+    "usage": {
+      "inputTokens": 707,
+      "outputTokens": 1136,
+      "cacheReadTokens": 0
+    }
+  },
+  "outcomes": {
+    "anchoredProposal": true,
+    "protectedOpeningPreserved": true,
+    "actualPatchApplied": true,
+    "exactTextRestored": true,
+    "staleProposalRefused": true,
+    "rejectedPassageNotRepeated": true
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "verifiedAt": "2026-10-18T04:35:11.756Z",
+  "base": "http://127.0.0.1:3291",
+  "scope": "Two genuine DeepSeek calls; actual HTTP transport. Application and restoration assertions use the actual returned proposal; browser UI is verified separately.",
+  "first": {
+    "version": 1,
+    "baseText": "It is a truth universally acknowledged, that a single man in possession of a good fortune must be in want of a wife.\n\nHowever little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families, that he is considered as the rightful property of some one or other of their daughters.\n\n“My dear Mr. Bennet,” said his lady to him one day, “have you heard that Netherfield Park is let at last?”\n\nMr. Bennet replied that he had not.\n\n“But it is,” returned she; “for Mrs. Long has just been here, and she told me all about it.”\n\nMr. Bennet made no answer.\n\n“Do not you want to know who has taken it?” cried his wife, impatiently.\n\n“You want to tell me, and I have no objection to hearing it.”",
+    "suggestion": {
+      "decision": "edit",
+      "before": "However little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families, that he is considered as the rightful property of some one or other of their daughters.",
+      "after": "However little the feelings or views of such a man may be known on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families that he is considered the rightful property of some one or other of their daughters.",
+      "reason": "Reorders the inverted 'However little known ... may be' into the natural 'little ... may be known', letting a first-time reader parse the concession at once without losing the ironic tone.",
+      "inferredIntent": "Untangle the opening concession clause so the sentence reads smoothly on a first pass while preserving Austen's ironic register and meaning."
+    },
+    "model": "deepseek-v4-flash",
+    "usage": {
+      "inputTokens": 657,
+      "outputTokens": 724,
+      "cacheReadTokens": 0
+    }
+  },
+  "redirected": {
+    "version": 1,
+    "baseText": "It is a truth universally acknowledged, that a single man in possession of a good fortune must be in want of a wife.\n\nHowever little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families, that he is considered as the rightful property of some one or other of their daughters.\n\n“My dear Mr. Bennet,” said his lady to him one day, “have you heard that Netherfield Park is let at last?”\n\nMr. Bennet replied that he had not.\n\n“But it is,” returned she; “for Mrs. Long has just been here, and she told me all about it.”\n\nMr. Bennet made no answer.\n\n“Do not you want to know who has taken it?” cried his wife, impatiently.\n\n“You want to tell me, and I have no objection to hearing it.”",
+    "suggestion": {
+      "decision": "edit",
+      "before": "“But it is,” returned she; “for Mrs. Long has just been here, and she told me all about it.”",
+      "after": "“But it is,” returned she, “for Mrs. Long has just been here, and she told me all about it.”",
+      "reason": "Replacing the semicolon with a comma before the second quotation smooths the interruption while leaving Austen's diction and the wife's eager tone intact.",
+      "inferredIntent": "Keep the author's voice and wit, making only a small punctuation adjustment so the dialogue reads more smoothly for a first-time reader."
+    },
+    "model": "deepseek-v4-flash",
+    "usage": {
+      "inputTokens": 1175,
+      "outputTokens": 1892,
+      "cacheReadTokens": 1152
+    }
+  },
+  "outcomes": {
+    "anchoredProposal": true,
+    "protectedOpeningPreserved": true,
+    "actualPatchApplied": true,
+    "exactTextRestored": true,
+    "staleProposalRefused": true,
+    "rejectedPassageNotRepeated": true
+  }
+}
