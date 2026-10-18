@@ -18,4 +18,4 @@ Public source: https://github.com/m7mdd77/imprint-editing-desk. Public browser v
 
 Sites version 2 deployed successfully from c673fb5965f3259f00fd3266f9b3a146619b60bf, deployment appgdep_6ad4d4265f848191b30bd7b2e018e5b1. The archive scan found zero active credentials and private runtime paths. The continuous 90.1-second H.264 walkthrough is available at /walkthrough.mp4; its latency, timeout and successful redirected inference remain visible. See evidence/walkthrough.json for the exact scope.
 
-DOO submission is the final remaining step. No ranking or award is claimed.
+Submitted to Beyond the Chatbot on October 18, 2026. The challenge page displayed “Entry saved. Grab your share kit below ↓” and changed to “Update your entry.” Repository, demo, video and notes were present in the saved form. Profile-bearing confirmation evidence is retained locally and ignored by Git. This records a saved competition entry, not a ranking or award.
