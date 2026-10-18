@@ -1,0 +1,16 @@
+{
+  "verifiedOn": "2026-10-18",
+  "url": "https://imprint-editing-desk.choggyacc.chatgpt.site/",
+  "scope": "Actual Chrome interaction with the public app. The downloaded artifact was read and compared with the visible edited document.",
+  "outcomes": {
+    "genuineSuggestionShown": true,
+    "actualDocumentChanged": true,
+    "exportContainsExactEditedDocument": true,
+    "editPersistedAfterReload": true,
+    "undoRestoredExactOriginal": true
+  },
+  "exportArtifact": {
+    "name": "Pride and Prejudice.txt",
+    "sha256": "70a30ea46d8c1bd86ac1e16b621d6f86128731199c3718061f14452a079e8c16"
+  }
+}

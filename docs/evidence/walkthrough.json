@@ -1,0 +1,16 @@
+{
+  "verifiedAt": "2026-10-18T14:13:26.736Z",
+  "source": "walkthrough-1792332683538.webm",
+  "publicUrl": "https://imprint-editing-desk.choggyacc.chatgpt.site/walkthrough.mp4",
+  "durationSeconds": 90.1,
+  "frames": 1802,
+  "width": 1920,
+  "height": 798,
+  "codec": "H.264",
+  "audio": false,
+  "continuous": true,
+  "editing": "Full-duration codec conversion; no cuts, acceleration or substituted frames.",
+  "sha256": "573c93ec6b72fb947fb73d72561984fa3a223460dfb4123edea08c05100739da",
+  "review": "Full decode succeeded. Contact sheet reviewed. Shows acceptance of a genuine proposal prepared before capture, actual text export, exact undo, a new reading that times out, before/after comparison, change to voice, genuine redirected suggestion and Keep the original. Provider latency remains visible.",
+  "limitation": "The initial successful inference completed before recording started; its accepted edit is visible. A later genuine inference completes during capture."
+}

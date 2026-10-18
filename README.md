@@ -2,6 +2,8 @@
 
 A working entry for [Beyond the Chatbot](https://build.doo.ooo/challenges/beyond-the-chatbot).
 
+[Open the live editing desk](https://imprint-editing-desk.choggyacc.chatgpt.site/) · [Public source](https://github.com/m7mdd77/imprint-editing-desk) · [90-second continuous walkthrough](https://imprint-editing-desk.choggyacc.chatgpt.site/walkthrough.mp4)
+
 Imprint makes the document the interface. Opening a proof initiates a real DeepSeek reading; one exact proposed edit appears beside its highlighted source passage. The editor accepts it, keeps the original, changes direction or restores the previous text. No conversation to reconstruct and no dashboard to interpret.
 
 The sample is a short public-domain excerpt from Jane Austen's *Pride and Prejudice*, chapter I, credited to [Project Gutenberg](https://www.gutenberg.org/ebooks/1342). Imprint explicitly presents an editorial adaptation, not a correction to the author's original. It also accepts a user's own 80–6,000-character document.
@@ -50,4 +52,6 @@ The prototype performs real document changes and downloads. It does not send ema
 Hosted development uses the retained Vinext Sites starter under `site/`: `npm ci`, root `node scripts/build.mjs`, then `npm run build` inside `site/`. Preserve its Sites integration, manifest identity and immutable tracked D1 migration history. The public source includes all Site files, not a Git submodule.
 
 See [methodology](docs/methodology.md), [architecture](docs/architecture.md), [failure test](docs/failure-test.md), [two-year thesis](docs/thesis.md), [data source](docs/data-source.md) and [release record](docs/release.md). Unit/model-double tests and actual provider/browser evidence are reported separately.
+
+The clean source archive passes all 22 tests and starts locally without a key. Public browser verification separately confirms genuine suggestions, actual text changes, persistence after reload, exact undo and a downloaded artifact matching the edited document byte-for-byte. The [comparison image](docs/evidence/comparison.jpg) shows the required interface contrast.
 

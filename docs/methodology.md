@@ -24,9 +24,9 @@ Novelty relative to earlier entries: Threshold controls authority; Relay Trust d
 1. Live mission and source excerpt verified. Complete.
 2. One exact edit, document/version binding, protected wording and reversible history. Complete.
 3. Genuine intent inference from document, direction and keep decisions; no model tools or automatic application. Actual local and public HTTP verification complete.
-4. Wrong-guess recovery through Keep original, a changed direction, and exact undo; stale/protected/number-changing patches refused. Automated and actual-model HTTP checks pass; final public browser review in progress.
-5. Browser workflow, clean clone, source/credential scan, public Site and repository. Public Site v1 and deployment scan complete. Local browser patch/undo and mobile width verified; public browser and clean archive finishing.
-6. Continuous walkthrough, comparison image, architecture, <=300-word thesis and factual notes. Pending.
+4. Wrong-guess recovery through Keep original, a changed direction, and exact undo; stale/protected/number-changing patches refused. Automated and actual-model HTTP checks pass; public browser apply/export/reload/undo verified.
+5. Browser workflow, clean clone, source/credential scan, public Site and repository. Public Site and repository published. Credential scans, public browser workflow, mobile width and clean source run verified. Final video release publishing.
+6. Continuous 90.1-second walkthrough, comparison image, architecture, 174-word thesis and factual notes. Complete; video publication finishing.
 7. Authorized DOO submission with visible saved-entry proof retained locally. Pending.
 
 The text is real public-domain literary material, not lorem ipsum. It is an editorial adaptation, never represented as Austen's revised original. User imports are held on this browser; generating a suggestion sends the current text and editing context to the approved DeepSeek provider through the operator's PC. No external publication of imported writing occurs automatically.

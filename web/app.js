@@ -6,6 +6,7 @@ try{const v=JSON.parse(localStorage.getItem('imprint-proof-v1'));if(v&&typeof v.
 function persist(){try{localStorage.setItem('imprint-proof-v1',JSON.stringify({doc,history,accepted}));$('save-state').textContent='Saved on this browser';}catch{$('save-state').textContent='Not saved · export your text';}}
 function status(s){$('status').textContent=s;}
 function renderPaper(){
+ document.querySelector('.genre').textContent=doc.source?'AN EDITORIAL ADAPTATION':'YOUR WORKING DRAFT';
  $('title').textContent=doc.title;$('byline').textContent=doc.byline;$('source').hidden=!doc.source;if(doc.source&&/^https:\/\/www\.gutenberg\.org\//.test(doc.source))$('source').href=doc.source;else $('source').removeAttribute('href');
  let text=esc(doc.text);const before=candidate?.suggestion?.decision==='edit'?candidate.suggestion.before:lastApplied;if(before&&doc.text.includes(before)){const at=doc.text.indexOf(before);text=esc(doc.text.slice(0,at))+`<mark class="${candidate?'':'applied'}" id="active-passage">${esc(before)}</mark>`+esc(doc.text.slice(at+before.length));}$('manuscript').innerHTML=text;
  $('word-count').textContent=doc.text.trim().split(/\s+/).length+' words';$('undo').disabled=!history.length;$('protect').checked=doc.protectedText.length>0;document.querySelectorAll('[data-direction]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.direction===doc.direction)));

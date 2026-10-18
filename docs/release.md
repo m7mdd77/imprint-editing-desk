@@ -14,4 +14,8 @@ Sites version 1 deployed from hosted source c7e47ee4c60477fb827203fc2b213d14dc98
 
 At 390px browser width, the proof had no horizontal overflow and the next editorial decision appeared before the manuscript. The before/after comparison uses an honestly labeled illustrative reconstruction and a screenshot of the working Imprint interface.
 
-The public repository, final browser review, continuous walkthrough and DOO saved-entry confirmation are finishing. No submission, ranking or award is claimed yet.
+Public source: https://github.com/m7mdd77/imprint-editing-desk. Public browser verification confirms an applied edit surviving reload, exact undo and the actual downloaded document. The clean source archive passes 22 tests and starts without credentials.
+
+Sites version 2 deployed successfully from c673fb5965f3259f00fd3266f9b3a146619b60bf, deployment appgdep_6ad4d4265f848191b30bd7b2e018e5b1. The archive scan found zero active credentials and private runtime paths. The continuous 90.1-second H.264 walkthrough is available at /walkthrough.mp4; its latency, timeout and successful redirected inference remain visible. See evidence/walkthrough.json for the exact scope.
+
+DOO submission is the final remaining step. No ranking or award is claimed.
