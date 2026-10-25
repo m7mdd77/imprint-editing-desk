@@ -42,8 +42,112 @@
       "scope": "One genuine hosted Sol request after the local retry succeeded. The returned edit is applied in memory using the actual app contract; this is HTTP verification, not a browser interaction.",
       "ok": false,
       "message": "Hosted request failed with status 503"
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T08:11:30.251Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 1,
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T08:11:57.771Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 2,
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T08:12:30.552Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 3,
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T08:13:27.086Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 4,
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T08:14:43.689Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 5,
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T08:15:54.888Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 6,
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T08:17:15.701Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 7,
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T08:18:31.226Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 8,
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-local-diagnostic",
+      "attemptedAt": "2026-10-25T08:15:15.145Z",
+      "model": "gpt-6.1-sol",
+      "scope": "Explicit operator retry. Original request, unchanged model, supported client and existing persistent allowance.",
+      "ok": false,
+      "code": "client_request_failed",
+      "message": "AgentRouter could not complete the Sol reading. No fallback or automatic retry was made.",
+      "diagnostics": [
+        "rate limit exceeded: Your requests to gpt-6.1-sol for gpt-6.1-sol in eastus2 have exceeded token rate limit.",
+        "rate limit exceeded: Your requests to gpt-6.1-sol for gpt-6.1-sol in eastus2 have exceeded token rate limit."
+      ],
+      "itemTypes": [
+        "error"
+      ]
     }
   ],
-  "latestVerifiedAt": "2026-10-25T07:33:51.488Z",
-  "status": "Local genuine Sol edit verified; hosted verification remains unsuccessful. Scheduled retry continues."
+  "latestVerifiedAt": "2026-10-25T08:20:56.350Z",
+  "status": "Hosted editing remains unverified. Scheduled retry deleted by user request; explicit active retries recorded with existing quotas unchanged."
 }
