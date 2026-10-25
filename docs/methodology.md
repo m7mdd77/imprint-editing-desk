@@ -2,6 +2,8 @@
 
 Mission: [Beyond the Chatbot](https://build.doo.ooo/challenges/beyond-the-chatbot), live brief reviewed October 17, 2026.
 
+Current update: October 25's approved recovery uses Astra and an original repair-table draft. See [recovery evidence](astra-recovery.md). The completion history and literary-source description below document the earlier release and recording.
+
 ```mermaid
 flowchart LR
  A[Verify mission] --> B[Choose one real job]

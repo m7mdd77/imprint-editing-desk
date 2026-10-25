@@ -34,7 +34,7 @@ export async function invokeSupportedClient({config,messages,directory,signal,sp
         if(e.type==='item.completed'&&e.item?.type==='agent_message')text+=e.item.text||'';
         if(e.type==='item.started'&&e.item?.type&&!['agent_message','reasoning'].includes(e.item.type))failed=true;
       }}catch{return finish(error('invalid_output','The supported client returned an invalid response.'));}
-      if(code!==0||failed||!text)return finish(error('client_request_failed',filtered?'AgentRouter declined this reading under its content filter. No fallback or automatic retry was made.':'AgentRouter could not complete the Sol reading. No fallback or automatic retry was made.'));
+      if(code!==0||failed||!text)return finish(error('client_request_failed',filtered?'AgentRouter declined this reading under its content filter. No fallback or automatic retry was made.':'AgentRouter could not complete this reading. No fallback or automatic retry was made.'));
       finish(null,{stop_reason:'end_turn',content:[{type:'text',text}],usage,estimatedCostUsd:null});
     });
     child.stdin.end(messages[1].content);

@@ -6,4 +6,18 @@ test('anonymous sessions use isolated cookies and enforce CSRF and Origin before
 test('a cookie round trip is recognized and an offline request leaves no queued writing',async t=>{const s=setup(t),r=await s.call('/api/config'),cookie=r.headers.get('set-cookie').split(';')[0],c=await r.json();const r2=await s.call('/api/config',undefined,{Cookie:cookie});assert.equal((await r2.json()).csrf,c.csrf);assert.equal((await s.call('/api/work',{requestId:randomUUID(),command},{Cookie:cookie,'X-CSRF-Token':c.csrf})).status,503);assert.equal(s.sql.prepare('SELECT COUNT(*) n FROM jobs').get().n,0);});
 test('writing is claimed once, input cleared, result delivered and removed',async t=>{const s=setup(t),id=randomUUID(),owner=randomUUID(),pending=requestWork(s.db,owner,id,command,{timeoutMs:200,pollMs:1}),claimed=await(await s.worker('claim')).json();assert.equal(claimed.job.owner,owner);assert.deepEqual(claimed.job.command,command);assert.equal(s.sql.prepare('SELECT payload FROM jobs').get().payload,null);assert.equal((await(await s.worker('claim')).json()).job,null);const data={version:1,baseText:sample.text};assert.equal((await s.worker('complete',{jobId:id,failed:false,data})).status,200);assert.deepEqual(await pending,data);assert.equal(s.sql.prepare('SELECT COUNT(*) n FROM jobs').get().n,0);assert.equal((await s.worker('complete',{jobId:id,failed:false,data})).status,409);});
 test('late results are rejected and expired writing removed',async t=>{const s=setup(t),id=randomUUID(),p=requestWork(s.db,randomUUID(),id,command,{timeoutMs:20,pollMs:1});await s.worker('claim');s.sql.prepare('UPDATE jobs SET lease=0').run();assert.equal((await s.worker('complete',{jobId:id,failed:true})).status,409);await assert.rejects(p,/timed out/);assert.equal(s.sql.prepare('SELECT COUNT(*) n FROM jobs').get().n,0);});
+
+test('a valid sixty-second reading outlives the former timeout but still needs a live lease',async t=>{
+ t.mock.timers.enable({apis:['Date'],now:Date.now()});
+ const s=setup(t),id=randomUUID(),pending=requestWork(s.db,randomUUID(),id,command,{pollMs:1});
+ await s.worker('claim');t.mock.timers.tick(60000);
+ const data={version:1,baseText:sample.text,model:'gpt-6-astra'};
+ assert.equal((await s.worker('complete',{jobId:id,failed:false,data})).status,200);
+ assert.deepEqual(await pending,data);
+ const expiredId=randomUUID(),expired=requestWork(s.db,randomUUID(),expiredId,command,{pollMs:1});
+ const refused=assert.rejects(expired,/timed out/);
+ await s.worker('claim');t.mock.timers.tick(106000);
+ assert.equal((await s.worker('complete',{jobId:expiredId,failed:false,data})).status,409);
+ await refused;
+});
 test('large protected context fits the public body boundary and publishing commands are refused',async t=>{const s=setup(t),r=await s.call('/api/config'),cookie=r.headers.get('set-cookie').split(';')[0],c=await r.json(),headers={Cookie:cookie,'X-CSRF-Token':c.csrf};const long={...command,text:'A'.repeat(5900),protectedText:['A'.repeat(900)],rejected:Array(8).fill('B'.repeat(780))};assert.ok(JSON.stringify(long).length>8000);assert.equal((await s.call('/api/work',{requestId:randomUUID(),command:long},headers)).status,503);assert.equal((await s.call('/api/work',{requestId:randomUUID(),command:{op:'publish',text:sample.text}},headers)).status,400);});

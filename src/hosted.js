@@ -1,5 +1,6 @@
 import { randomUUID, timingSafeEqual } from 'node:crypto';
 import { validateCommand } from './contract.js';
+import { JOB_LEASE_MS, HOSTED_WAIT_MS } from './limits.js';
 class HttpError extends Error { constructor(status,message){super(message);this.status=status;} }
 const json=(status,value,headers={})=>new Response(JSON.stringify(value),{status,headers:{'Content-Type':'application/json','Cache-Control':'no-store','X-Content-Type-Options':'nosniff',...headers}});
 async function readBody(request,max=64000) {
@@ -26,7 +27,7 @@ async function worker(request,env,path) {
   if(path==='ping'){await heartbeat(db);return {online:true};}
   if(path==='claim') {
     await heartbeat(db);await cleanup(db);
-    const row=await db.prepare("UPDATE jobs SET status='claimed',lease=? WHERE id=(SELECT id FROM jobs WHERE status='pending' AND created>? ORDER BY created LIMIT 1) AND status='pending' RETURNING id,owner,payload").bind(now+50000,now-55000).first();
+    const row=await db.prepare("UPDATE jobs SET status='claimed',lease=? WHERE id=(SELECT id FROM jobs WHERE status='pending' AND created>? ORDER BY created LIMIT 1) AND status='pending' RETURNING id,owner,payload").bind(now+JOB_LEASE_MS,now-HOSTED_WAIT_MS).first();
     if(row)await db.prepare('UPDATE jobs SET payload=NULL WHERE id=?').bind(row.id).run();
     return {job:row?{id:row.id,owner:row.owner,command:JSON.parse(row.payload)}:null};
   }
@@ -38,7 +39,7 @@ async function worker(request,env,path) {
   }
   throw new HttpError(404,'Not found.');
 }
-export async function requestWork(db,owner,id,command,{timeoutMs=55000,pollMs=500}={}) {
+export async function requestWork(db,owner,id,command,{timeoutMs=HOSTED_WAIT_MS,pollMs=500}={}) {
   await db.prepare('INSERT INTO jobs(id,owner,payload,status,created) VALUES (?,?,?,?,?)').bind(id,owner,JSON.stringify(command),'pending',Date.now()).run();
   const deadline=Date.now()+timeoutMs;
   try {

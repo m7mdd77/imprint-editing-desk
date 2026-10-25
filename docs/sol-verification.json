@@ -164,8 +164,458 @@
         "error",
         "agent_message"
       ]
+    },
+    {
+      "name": "imprint-local-diagnostic",
+      "attemptedAt": "2026-10-25T11:54:51.930Z",
+      "model": "gpt-6.1-sol",
+      "scope": "Local diagnostic using the actual public PC worker editor, client directory and persistent allowance; original request and model. This is not a public HTTP request.",
+      "ok": false,
+      "code": "client_request_failed",
+      "providerFailure": "content_filter",
+      "message": "AgentRouter declined this reading under its content filter. No fallback or automatic retry was made.",
+      "diagnostics": [
+        "stream disconnected before completion: Incomplete response returned, reason: content_filter",
+        "stream disconnected before completion: Incomplete response returned, reason: content_filter"
+      ],
+      "itemTypes": [
+        "error",
+        "agent_message"
+      ]
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T09:00:02.990Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 9,
+      "requestId": "f63f2878-4f71-4f09-b64e-3b7457d41220",
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "workerClaimed": true,
+      "workerCompletionDelivered": true,
+      "workerFailure": {
+        "code": "client_request_failed",
+        "providerFailure": "content_filter"
+      },
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T09:00:46.902Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 10,
+      "requestId": "44a41b20-61c1-4f8b-bb17-6dff4e0aa775",
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "workerClaimed": true,
+      "workerCompletionDelivered": true,
+      "workerFailure": {
+        "code": "client_request_failed",
+        "providerFailure": "content_filter"
+      },
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T09:01:21.896Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 11,
+      "requestId": "9ca98f84-533c-4287-9e0f-ba1d9904c1e8",
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "workerClaimed": true,
+      "workerCompletionDelivered": true,
+      "workerFailure": {
+        "code": "client_request_failed",
+        "providerFailure": "content_filter"
+      },
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T09:02:12.791Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 12,
+      "requestId": "620d31c1-0de3-4cf8-91d7-2266ce96c8ec",
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "workerClaimed": true,
+      "workerCompletionDelivered": true,
+      "workerFailure": {
+        "code": "client_request_failed",
+        "providerFailure": "content_filter"
+      },
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T09:03:30.390Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 13,
+      "requestId": "2895d8bc-d5b0-4614-91de-a2b72f8886d2",
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "workerClaimed": true,
+      "workerCompletionDelivered": true,
+      "workerFailure": {
+        "code": "client_request_failed",
+        "providerFailure": "content_filter"
+      },
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T09:04:38.897Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 14,
+      "requestId": "b6a42861-5e59-4ac9-8a8a-2f9b68e7083d",
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "workerClaimed": true,
+      "workerCompletionDelivered": true,
+      "workerFailure": {
+        "code": "client_request_failed",
+        "providerFailure": "content_filter"
+      },
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T09:05:49.942Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 15,
+      "requestId": "6652405c-3188-42fd-8e4c-24c4a68f6979",
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "workerClaimed": true,
+      "workerCompletionDelivered": true,
+      "workerFailure": {
+        "code": "client_request_failed",
+        "providerFailure": "content_filter"
+      },
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T09:07:07.150Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 16,
+      "requestId": "0baa3582-04ad-4871-82c1-3ce6f95bca8e",
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "workerClaimed": true,
+      "workerCompletionDelivered": true,
+      "workerFailure": {
+        "code": "allowance",
+        "providerFailure": "unknown"
+      },
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T10:00:02.052Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 17,
+      "requestId": "1a1c6563-61eb-430d-b889-f3e53855fe10",
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "workerClaimed": true,
+      "workerCompletionDelivered": true,
+      "workerFailure": {
+        "code": "client_request_failed",
+        "providerFailure": "content_filter"
+      },
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T10:01:41.623Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 18,
+      "requestId": "341f7387-8160-44f9-984f-eabfb43557bf",
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "workerClaimed": true,
+      "workerCompletionDelivered": true,
+      "workerFailure": {
+        "code": "client_request_failed",
+        "providerFailure": "content_filter"
+      },
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T10:02:52.767Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 19,
+      "requestId": "9272e8bd-d4bc-437a-98e6-e87f1e74ab8b",
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "workerClaimed": true,
+      "workerCompletionDelivered": true,
+      "workerFailure": {
+        "code": "client_request_failed",
+        "providerFailure": "content_filter"
+      },
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T10:04:09.787Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 20,
+      "requestId": "2473cada-1578-4826-a088-681a60e34166",
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "workerClaimed": true,
+      "workerCompletionDelivered": true,
+      "workerFailure": {
+        "code": "client_request_failed",
+        "providerFailure": "rate_limit"
+      },
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T10:05:15.480Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 21,
+      "requestId": "e7a7d3bf-166c-42f8-891f-5aa10d719ac4",
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "workerClaimed": true,
+      "workerCompletionDelivered": true,
+      "workerFailure": {
+        "code": "client_request_failed",
+        "providerFailure": "content_filter"
+      },
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T10:06:25.931Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 22,
+      "requestId": "ea0d8736-3f3e-4ff1-8421-54d6ad202d87",
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "workerClaimed": true,
+      "workerCompletionDelivered": true,
+      "workerFailure": {
+        "code": "client_request_failed",
+        "providerFailure": "content_filter"
+      },
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T10:08:12.097Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 23,
+      "requestId": "790acb50-518a-4324-927b-f08b2be1ed23",
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "workerClaimed": true,
+      "workerCompletionDelivered": true,
+      "workerFailure": {
+        "code": "client_request_failed",
+        "providerFailure": "content_filter"
+      },
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T10:09:45.847Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 24,
+      "requestId": "c998e6a4-2a56-4a25-b5e9-4aec2c9b8789",
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "workerClaimed": true,
+      "workerCompletionDelivered": true,
+      "workerFailure": {
+        "code": "client_request_failed",
+        "providerFailure": "content_filter"
+      },
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T11:00:02.049Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 25,
+      "requestId": "15fe6b68-1ba7-40f8-8d5f-60efd5ebc4dc",
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "workerClaimed": true,
+      "workerCompletionDelivered": true,
+      "workerFailure": {
+        "code": "client_request_failed",
+        "providerFailure": "content_filter"
+      },
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T11:01:12.201Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 26,
+      "requestId": "d52331f5-ff6f-4297-963c-e8882b79e5f2",
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "workerClaimed": true,
+      "workerCompletionDelivered": true,
+      "workerFailure": {
+        "code": "client_request_failed",
+        "providerFailure": "rate_limit"
+      },
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T11:02:48.643Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 27,
+      "requestId": "9f40691d-445a-48b3-a5f3-99427ee4181d",
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "workerClaimed": true,
+      "workerCompletionDelivered": true,
+      "workerFailure": {
+        "code": "client_request_failed",
+        "providerFailure": "connection"
+      },
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T11:03:56.431Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 28,
+      "requestId": "ff4a5f37-4137-4583-89cb-d8be91ade066",
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "workerClaimed": true,
+      "workerCompletionDelivered": true,
+      "workerFailure": {
+        "code": "client_request_failed",
+        "providerFailure": "content_filter"
+      },
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T11:05:07.872Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 29,
+      "requestId": "7dec03e1-8445-4286-9f18-56db7dfa2bf0",
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "workerClaimed": true,
+      "workerCompletionDelivered": true,
+      "workerFailure": {
+        "code": "client_request_failed",
+        "providerFailure": "rate_limit"
+      },
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T11:06:13.656Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 30,
+      "requestId": "75449c72-589d-4078-97a7-b324cb60f7e0",
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "workerClaimed": true,
+      "workerCompletionDelivered": true,
+      "workerFailure": {
+        "code": "client_request_failed",
+        "providerFailure": "content_filter"
+      },
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T11:07:59.607Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 31,
+      "requestId": "f57133a3-2f3f-4cb0-8235-77572db1701d",
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "workerClaimed": true,
+      "workerCompletionDelivered": true,
+      "workerFailure": {
+        "code": "client_request_failed",
+        "providerFailure": "content_filter"
+      },
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
+    },
+    {
+      "name": "imprint-hosted-active-retry",
+      "attemptedAt": "2026-10-25T11:09:12.437Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "attempt": 32,
+      "requestId": "b45171fb-97b9-4bf3-ad71-70d23a13f6a4",
+      "model": "gpt-6.1-sol",
+      "scope": "Authorized active hosted retry. Original sample, original request, one visitor session, existing quotas and supported client. Returned edit applied only in memory using the real contract.",
+      "status": 503,
+      "workerClaimed": true,
+      "workerCompletionDelivered": true,
+      "workerFailure": {
+        "code": "provider_timeout",
+        "providerFailure": "timeout"
+      },
+      "ok": false,
+      "message": "The service could not finish. The document was not changed."
     }
   ],
-  "latestVerifiedAt": "2026-10-25T08:35:54.819Z",
-  "status": "Hosted editing remains unverified. Scheduled retry deleted by user request; explicit active retries recorded with existing quotas unchanged."
+  "latestVerifiedAt": "2026-10-25T12:14:30.290Z",
+  "status": "Historical Sol hosted checks were unsuccessful. Imprint now has a user-approved Astra/default-draft recovery; see astra-verification.json."
 }

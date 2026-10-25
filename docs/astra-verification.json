@@ -1,0 +1,96 @@
+{
+  "verifiedAt": "2026-10-25T12:28:51.196Z",
+  "model": "gpt-6-astra",
+  "sampleTitle": "At the repair table",
+  "scope": "User-approved Imprint-only model and default-document recovery. The earlier Austen/Sol failures are retained as historical failures.",
+  "localOriginalDraft": {
+    "attemptedAt": "2026-10-25T12:03:50.513Z",
+    "model": "gpt-6-astra",
+    "scope": "Separate original-draft diagnostic, not a fix or successful verification of the Austen sample. Original Imprint system instructions and editing protections; genuine Codex client; actual worker persistent allowance. No hosted success claimed.",
+    "ok": true,
+    "decision": "edit",
+    "usage": {
+      "inputTokens": 4592,
+      "outputTokens": 233,
+      "cacheReadTokens": 0
+    },
+    "patchAppliedInMemory": true,
+    "protectedOpeningPreserved": true
+  },
+  "publicHttp": {
+    "attemptedAt": "2026-10-25T12:11:39.064Z",
+    "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+    "requestId": "40fa4bf0-4ef1-4812-a4da-42f1a41e0a23",
+    "model": "gpt-6-astra",
+    "sampleTitle": "At the repair table",
+    "scope": "Fresh genuine public request using the user-approved original default draft and Astra. Actual returned patch applied in memory through the real contract. No browser interaction claimed.",
+    "status": 200,
+    "ok": true,
+    "usage": {
+      "inputTokens": 4592,
+      "outputTokens": 618,
+      "cacheReadTokens": 0
+    },
+    "decision": "edit",
+    "patchAppliedInMemory": true,
+    "protectedOpeningPreserved": true,
+    "staleVersionRefused": true
+  },
+  "browser": {
+    "verifiedAt": "2026-10-25T12:25:42.124Z",
+    "verified": true,
+    "url": "https://imprint-editing-desk.choggyacc.chatgpt.site/",
+    "modelLabel": "LIVE ASTRA",
+    "sampleTitle": "At the repair table",
+    "realSuggestionVisible": true,
+    "noMutationBeforeAcceptance": true,
+    "acceptedEditChangedText": true,
+    "protectedOpeningPreserved": true,
+    "acceptedTextPersistedAfterReload": true,
+    "undoRestoredExactOriginal": true,
+    "source": "Actual public in-app browser workflow; checks compare visible manuscript DOM text. No fixture or saved model answer was injected.",
+    "screenshot": "evidence/imprint-astra-live.png"
+  },
+  "tests": {
+    "command": "node --test test/*.test.js",
+    "passed": 30
+  },
+  "timing": {
+    "inferenceMs": 90000,
+    "queueLeaseMs": 100000,
+    "hostedWaitMs": 105000,
+    "browserWaitMs": 115000,
+    "regression": "A simulated valid sixty-second completion succeeds; expired completion is refused."
+  },
+  "legacySolPublicSummary": {
+    "attempts": 32,
+    "successful": 0,
+    "workerFailureCategories": {
+      "unclassified": 8,
+      "content_filter": 18,
+      "unknown": 1,
+      "rate_limit": 3,
+      "connection": 1,
+      "timeout": 1
+    }
+  },
+  "astraOnLegacySample": {
+    "attemptedAt": "2026-10-25T12:01:50.559Z",
+    "model": "gpt-6-astra",
+    "scope": "User-approved alternative-model probe for Imprint only. Original editing request and protections; genuine Codex client; actual worker persistent allowance. No hosted success claimed.",
+    "ok": false,
+    "code": "client_request_failed",
+    "providerFailure": "content_filter",
+    "message": "AgentRouter declined this reading under its content filter. No fallback or automatic retry was made."
+  },
+  "deployment": {
+    "projectId": "appgprj_6ad3a11db4948191ae40588367f86357",
+    "version": 6,
+    "versionId": "appgprj_6ad3a11db4948191ae40588367f86357~appgver_e069f700466c8191bd2d9c33055f1586",
+    "deploymentId": "appgdep_6addf44ec68881919475d538a48b020f",
+    "status": "succeeded",
+    "url": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+    "sourceCommit": "4bfa2090800794e3751b5b90df155a6d96c4a396",
+    "audience": "public"
+  }
+}

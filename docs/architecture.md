@@ -5,7 +5,7 @@ flowchart LR
  A[Current document and editor choices] --> B[Anonymous session, Origin and CSRF checks]
  B --> C[Bounded Worker/D1 queue]
  C --> D[Authenticated outbound PC worker]
- D --> E[Genuine DeepSeek, tools disabled]
+ D --> E[Genuine Astra via AgentRouter, tools disabled]
  E --> F[Validate one exact anchored replacement]
  F --> G[Highlight passage and surface one decision]
  G -->|Keep this edit| H[Recheck text, version and protected spans]

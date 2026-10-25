@@ -1,16 +1,6 @@
-export const sample={title:'Pride and Prejudice',byline:'Jane Austen · Chapter I, 1813',source:'https://www.gutenberg.org/ebooks/1342',text:`It is a truth universally acknowledged, that a single man in possession of a good fortune must be in want of a wife.
+export const sample={title:'At the repair table',byline:'An original Imprint demo draft',source:null,text:`A small repair can keep a useful object in service for years.
 
-However little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families, that he is considered as the rightful property of some one or other of their daughters.
+At our weekend repair table, the first thing that is done by volunteers is an examination of each item in order to make a decision about whether it is possible for a safe repair to be carried out. Visitors stay with their belongings and can ask questions while the work takes place.
 
-“My dear Mr. Bennet,” said his lady to him one day, “have you heard that Netherfield Park is let at last?”
-
-Mr. Bennet replied that he had not.
-
-“But it is,” returned she; “for Mrs. Long has just been here, and she told me all about it.”
-
-Mr. Bennet made no answer.
-
-“Do not you want to know who has taken it?” cried his wife, impatiently.
-
-“You want to tell me, and I have no objection to hearing it.”`};
+We keep a tray for loose screws, a notebook for useful discoveries, and a clear space for unfinished jobs. If a repair needs a specialist, we explain the next step before returning the item. The aim is to send people home with a practical plan and a little more confidence.`};
 export const opening=sample.text.split('\n\n')[0];
