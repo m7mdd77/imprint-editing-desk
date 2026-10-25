@@ -19,6 +19,31 @@
       "ok": false,
       "code": "client_request_failed",
       "message": "AgentRouter could not complete the Sol reading. No fallback or automatic retry was made."
+    },
+    {
+      "name": "imprint-local-retry",
+      "attemptedAt": "2026-10-25T07:31:36.443Z",
+      "model": "gpt-6.1-sol",
+      "scope": "Explicit operator retry. Original request, unchanged model, supported client and existing persistent allowance.",
+      "ok": true,
+      "decision": "edit",
+      "usage": {
+        "inputTokens": 4667,
+        "outputTokens": 1367,
+        "cacheReadTokens": 0
+      },
+      "patchAppliedInMemory": true,
+      "protectedOpeningPreserved": true
+    },
+    {
+      "name": "imprint-hosted-verification",
+      "attemptedAt": "2026-10-25T07:32:57.246Z",
+      "base": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+      "scope": "One genuine hosted Sol request after the local retry succeeded. The returned edit is applied in memory using the actual app contract; this is HTTP verification, not a browser interaction.",
+      "ok": false,
+      "message": "Hosted request failed with status 503"
     }
-  ]
+  ],
+  "latestVerifiedAt": "2026-10-25T07:33:51.488Z",
+  "status": "Local genuine Sol edit verified; hosted verification remains unsuccessful. Scheduled retry continues."
 }

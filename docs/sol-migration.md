@@ -2,6 +2,6 @@
 
 Current inference uses `gpt-6.1-sol` through AgentRouter’s supported Codex client and Responses endpoint. Configure `AGENTROUTER_MODEL=gpt-6.1-sol`, `AGENTROUTER_TRANSPORT=codex`, `AGENTROUTER_API_FORMAT=openai`, `AGENTROUTER_BASE_URL=https://agentrouter.org/v1`, `CODEX_PATH` and the existing server-only key. The child has an isolated configuration, read-only sandbox, disabled shell/browser/app/plugin/agent features, no saved session, and no application/provider retries. Model output remains a proposal subject to existing domain validation and separate execution authority. Application deadlines and request allowances remain in force. The former Claude-specific estimated USD/output caps do not apply to this client; unknown costs remain unknown. Historical DeepSeek evidence and video are dated records, not new Sol invocations.
 
-Verification: the provider returned `content_filter` for the sample editing request. The app reports the refusal without replacing it with a saved answer or a different model. This provider restriction is not a verified successful edit.
+Initial verification returned `content_filter`. A later genuine Sol retry produced a valid edit: the real app contract applied it in memory, preserved the protected opening, and reported 4,667 input and 1,367 output tokens. The subsequent hosted request returned HTTP 503, so public editing is not yet verified. Scheduled retries continue; no complete resolution is claimed.
 
 Fresh verification uses fictional data; no external effects were executed. See `sol-verification.json` for scoped results.
