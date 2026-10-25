@@ -146,8 +146,26 @@
       "itemTypes": [
         "error"
       ]
+    },
+    {
+      "name": "imprint-local-diagnostic",
+      "attemptedAt": "2026-10-25T08:34:53.302Z",
+      "model": "gpt-6.1-sol",
+      "scope": "Local diagnostic using the actual public PC worker editor, client directory and persistent allowance; original request and model. This is not a public HTTP request.",
+      "ok": false,
+      "code": "client_request_failed",
+      "providerFailure": "content_filter",
+      "message": "AgentRouter declined this reading under its content filter. No fallback or automatic retry was made.",
+      "diagnostics": [
+        "stream disconnected before completion: Incomplete response returned, reason: content_filter",
+        "stream disconnected before completion: Incomplete response returned, reason: content_filter"
+      ],
+      "itemTypes": [
+        "error",
+        "agent_message"
+      ]
     }
   ],
-  "latestVerifiedAt": "2026-10-25T08:20:56.350Z",
+  "latestVerifiedAt": "2026-10-25T08:35:54.819Z",
   "status": "Hosted editing remains unverified. Scheduled retry deleted by user request; explicit active retries recorded with existing quotas unchanged."
 }

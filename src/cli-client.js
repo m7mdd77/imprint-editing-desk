@@ -2,6 +2,7 @@ import {spawn} from 'node:child_process';
 import {mkdirSync,writeFileSync} from 'node:fs';
 import {resolve} from 'node:path';
 import {AgentError} from './agent-error.js';
+import {classifyProviderFailure} from './diagnostics.js';
 
 // A real supported Codex client; never impersonate it with HTTP headers.
 // Only proposals cross this boundary. The application still owns every effect.
@@ -16,8 +17,8 @@ export async function invokeSupportedClient({config,messages,directory,signal,sp
   const env={CODEX_HOME:home,AGENTROUTER_API_KEY:config.key};
   for(const key of ['SystemRoot','WINDIR','PATH','TEMP','TMP','USERPROFILE','LOCALAPPDATA','APPDATA','COMSPEC'])if(process.env[key])env[key]=process.env[key];
   return new Promise((ok,no)=>{
-    let output='',bytes=0,settled=false,usage={},text='',failed=false,filtered=false;
-    const error=(code,message)=>Object.assign(new AgentError(502,code,message),{inputTokens:usage.input_tokens||0,outputTokens:usage.output_tokens||0,cacheReadTokens:usage.cache_read_input_tokens||0,estimatedCostUsd:null});
+    let output='',bytes=0,settled=false,usage={},text='',failed=false,filtered=false,providerFailure='unknown';
+    const error=(code,message)=>Object.assign(new AgentError(502,code,message),{providerFailure:code==='provider_timeout'?'timeout':providerFailure,inputTokens:usage.input_tokens||0,outputTokens:usage.output_tokens||0,cacheReadTokens:usage.cache_read_input_tokens||0,estimatedCostUsd:null});
     if(signal?.aborted)return no(error('provider_timeout','The AI reading timed out. No action was authorized.'));
     const child=spawnImpl(config.clientPath,args,{cwd,env,windowsHide:true,stdio:['pipe','pipe','pipe']});
     const finish=(err,result)=>{if(settled)return;settled=true;signal?.removeEventListener('abort',abort);if(err){child.kill();no(err);}else ok(result);};
@@ -29,7 +30,7 @@ export async function invokeSupportedClient({config,messages,directory,signal,sp
     child.on('close',code=>{
       if(settled)return;
       try{for(const line of output.trim().split('\n')){const e=JSON.parse(line);if(e.type==='turn.completed'){const u=e.usage||{},n=k=>Number.isSafeInteger(u[k])&&u[k]>=0?u[k]:0;usage={input_tokens:Math.max(0,n('input_tokens')-n('cached_input_tokens')),output_tokens:n('output_tokens'),cache_read_input_tokens:n('cached_input_tokens')};}
-        if(e.type==='error'||e.type==='turn.failed'){failed=true;filtered ||= /content_filter/.test(String(e.message||e.error?.message||''));}
+        if(e.type==='error'||e.type==='turn.failed'){failed=true;const detail=String(e.message||e.error?.message||'');filtered ||= /content_filter/.test(detail);const category=classifyProviderFailure(detail);if(category!=='unknown')providerFailure=category;}
         if(e.type==='item.completed'&&e.item?.type==='agent_message')text+=e.item.text||'';
         if(e.type==='item.started'&&e.item?.type&&!['agent_message','reasoning'].includes(e.item.type))failed=true;
       }}catch{return finish(error('invalid_output','The supported client returned an invalid response.'));}
