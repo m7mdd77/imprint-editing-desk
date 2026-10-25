@@ -1,0 +1,24 @@
+{
+  "verifiedAt": "2026-10-25T05:21:23.407Z",
+  "model": "gpt-6.1-sol",
+  "runs": [
+    {
+      "name": "imprint",
+      "ok": false,
+      "code": "client_request_failed",
+      "message": "AgentRouter could not complete the Sol reading. No fallback or automatic retry was made."
+    },
+    {
+      "name": "imprint-explicit-retest",
+      "ok": false,
+      "code": "client_request_failed",
+      "message": "AgentRouter could not complete the Sol reading. No fallback or automatic retry was made."
+    },
+    {
+      "name": "imprint-explicit-retest",
+      "ok": false,
+      "code": "client_request_failed",
+      "message": "AgentRouter could not complete the Sol reading. No fallback or automatic retry was made."
+    }
+  ]
+}

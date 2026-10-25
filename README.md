@@ -1,3 +1,5 @@
+Current runtime: **GPT 6.1 Sol through AgentRouter**. See [configuration and verification](docs/sol-migration.md). Dated DeepSeek recordings remain historical evidence.
+
 # Imprint — one thoughtful edit
 
 A working entry for [Beyond the Chatbot](https://build.doo.ooo/challenges/beyond-the-chatbot).
