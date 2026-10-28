@@ -20,11 +20,11 @@ test('provider classification survives the editor boundary without retaining pri
 });
 test('malformed model output and protected edits fail without document mutations',async t=>{const run=model(t,async()=>({content:[{type:'text',text:'not JSON'}]}));await assert.rejects(run(c),{code:'invalid_model'});const unsafe=model(t,async()=>({content:[{type:'text',text:JSON.stringify({...suggestion,before:opening})}]}));await assert.rejects(unsafe(c),{code:'protected'});assert.equal(c.text,sample.text);});
 test('failed requests consume persistent allowance',async t=>{let calls=0;const run=model(t,async()=>{calls++;throw Error('offline');});for(let i=0;i<16;i++)await assert.rejects(run(c),{code:'provider'});await assert.rejects(run(c),{code:'allowance'});assert.equal(calls,16);});
-test('only the approved provider and verified model are accepted',()=>{assert.throws(()=>configuration({AGENTROUTER_BASE_URL:'https://attacker.invalid'}));assert.throws(()=>configuration({AGENTROUTER_MODEL:'invented'}));});
+test('only the approved Cerebras provider and model are accepted',()=>{assert.throws(()=>configuration({CEREBRAS_BASE_URL:'https://attacker.invalid/v1'}));assert.throws(()=>configuration({CEREBRAS_MODEL:'invented'}));});
 
-test('Imprint selects Astra independently of a shared Sol setting without changing the shared environment',()=>{
+test('Cerebras ignores legacy Sol and Astra settings without changing the shared environment',()=>{
  const shared={AGENTROUTER_MODEL:'gpt-6.1-sol',IMPRINT_MODEL:'gpt-6-astra'};
- assert.equal(configuration(shared).model,'gpt-6-astra');assert.equal(shared.AGENTROUTER_MODEL,'gpt-6.1-sol');
- assert.equal(configuration({}).model,'gpt-6-astra');
- assert.throws(()=>configuration({...shared,IMPRINT_MODEL:'unapproved'}),{code:'configuration'});
+ assert.equal(configuration(shared).model,'qwen-3.8-27b');assert.equal(shared.AGENTROUTER_MODEL,'gpt-6.1-sol');
+ assert.equal(configuration({}).model,'qwen-3.8-27b');
+ assert.throws(()=>configuration({...shared,CEREBRAS_MODEL:'unapproved'}),{code:'invalid_configuration'});
 });

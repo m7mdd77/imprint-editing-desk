@@ -1,0 +1,57 @@
+{
+  "verifiedAt": "2026-10-28T07:30:49.965Z",
+  "provider": "Cerebras",
+  "model": "qwen-3.8-27b",
+  "scope": "Fresh genuine proposal-only migration checks on synthetic data. Existing operator allowance directories retained. No external actions or cached answers.",
+  "tests": {
+    "passed": 36,
+    "failed": 0,
+    "scope": "Local regression and mocked provider boundary tests; independent from the genuine call below."
+  },
+  "local": {
+    "name": "imprint",
+    "ok": true,
+    "model": "qwen-3.8-27b",
+    "usage": {
+      "inputTokens": 548,
+      "outputTokens": 128,
+      "cacheReadTokens": 0
+    },
+    "decision": "edit",
+    "patchApplied": true,
+    "protectedOpeningPreserved": true,
+    "elapsedMs": 396
+  },
+  "publicVerification": {
+    "name": "imprint",
+    "ok": true,
+    "model": "qwen-3.8-27b",
+    "usage": {
+      "inputTokens": 548,
+      "outputTokens": 127,
+      "cacheReadTokens": 0
+    },
+    "decision": "edit",
+    "patchAppliedInMemory": true,
+    "protectedOpeningPreserved": true,
+    "staleVersionRefused": true,
+    "elapsedMs": 3948
+  },
+  "deployment": {
+    "name": "imprint",
+    "project_id": "appgprj_6ad3a11db4948191ae40588367f86357",
+    "version_id": "appgprj_6ad3a11db4948191ae40588367f86357~appgver_db27ce89c4b48191a7cd384584286837",
+    "deployment_id": "appgdep_6ae1a94b734c8191af182a774432e7fc",
+    "status": "succeeded",
+    "url": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+    "commit_sha": "cf87be67141f2f8027c25f31d1f37ac039020a01"
+  },
+  "browserVerification": {
+    "at": "2026-10-28T07:55:57.182Z",
+    "sample": "At the repair table",
+    "liveModelLabel": "LIVE QWEN",
+    "suggestionVisible": true,
+    "documentUnchangedBeforeAcceptance": true,
+    "screenshot": "evidence/imprint-cerebras-live.png"
+  }
+}

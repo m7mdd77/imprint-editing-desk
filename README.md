@@ -1,4 +1,4 @@
-Current runtime: **GPT 6 Astra through AgentRouter**, selected for Imprint only. See [configuration and verification](docs/astra-recovery.md). Dated DeepSeek recordings and Sol failures remain historical evidence.
+Current runtime: **Qwen 3.8 27B through Cerebras**. See [configuration and fresh verification](docs/cerebras-migration.md). Earlier provider recordings and evidence remain dated history.
 
 # Imprint — one thoughtful edit
 
@@ -22,7 +22,7 @@ node server.js
 
 Open http://127.0.0.1:3291. Manual editing, exact undo and text export work locally without a provider. Live suggestions show an honest unavailable state until configured. There is no fixture fallback.
 
-To enable genuine inference, copy `.env.example` to ignored `.env`, set the approved AgentRouter key and `CODEX_PATH` for the genuine Codex client, then run `node --env-file=.env server.js`. To reuse a shared environment without changing other demos, put `IMPRINT_MODEL=gpt-6-astra` in ignored `.env.imprint` and run `node --env-file=../decision-engine/.env --env-file=.env.imprint server.js` (or `pc-worker.js` for the public service). Never copy the shared private file into this source.
+To enable genuine inference, copy `.env.example` to ignored `.env` and set `CEREBRAS_API_KEY` or `CEREBRAS_KEY_FILE`, then run `node --env-file=.env server.js`. The existing operator can reuse the private shared environment with `node --env-file=../decision-engine/.env pc-worker.js`. Never copy the shared private file into this source.
 
 ## What to try
 
@@ -35,19 +35,19 @@ To enable genuine inference, copy `.env.example` to ignored `.env`, set the appr
 
 ## Model authority and boundaries
 
-Astra infers the next edit from the document, editorial direction, protected opening and kept passages. It returns exactly one quoted source span, replacement, editorial reason and inferred intent, or explicitly returns no edit. It cannot apply, export, publish, invoke tools or access local files. A suggestion is bound to the full input text and monotonic version. Both server and browser validate exact unique anchoring, protected spans, rejected passages and unchanged numbers before application.
+Qwen infers the next edit from the document, editorial direction, protected opening and kept passages. It returns exactly one quoted source span, replacement, editorial reason and inferred intent, or explicitly returns no edit. It cannot apply, export, publish, invoke tools or access local files. A suggestion is bound to the full input text and monotonic version. Both server and browser validate exact unique anchoring, protected spans, rejected passages and unchanged numbers before application.
 
 These checks do **not** establish semantic equivalence or prove preservation of facts, names, literary meaning or tone. Those remain human judgments. The model is instructed to preserve them; they are not claimed as mechanically guaranteed. Imported documents and model output render as escaped text, never executable markup.
 
-The supported Codex client uses an isolated configuration, a read-only sandbox, disabled tools and persistence, bounded output, a 90-second application deadline, low reasoning effort and no application/provider retries or automatic model fallback. The queue lease is 100 seconds, the hosted wait is 105 seconds and the browser wait is 115 seconds, so a slow valid result can arrive before its lease expires. Numeric token usage comes from the client; no USD cap or guaranteed per-call price is claimed. Failed attempts count against the PC's persistent 16-attempt rolling-hour allowance. The public host also limits eight attempts per anonymous session per hour and 16 globally per hour.
+The direct Cerebras adapter uses bounded output, no tools, a 90-second application deadline, reasoning disabled and no application retries or automatic model fallback. The queue lease is 100 seconds, the hosted wait is 105 seconds and the browser wait is 115 seconds. Numeric token usage comes from Cerebras; no guaranteed per-call price is claimed. Failed attempts count against the PC's persistent 16-attempt rolling-hour allowance. The public host also limits eight attempts per anonymous session per hour and 16 globally per hour.
 
 ## Public hosting
 
-The ChatGPT Site serves the interface and Worker/D1 queue. An authenticated outbound PC worker performs genuine inference. The AgentRouter key remains on the PC; only a separate random worker credential is stored as a Site secret. The public service requires the operator's PC awake and connected. Browser-local editing/export remain available when it is offline.
+The ChatGPT Site serves the interface and Worker/D1 queue. An authenticated outbound PC worker performs genuine inference. The Cerebras key remains on the PC; only a separate random worker credential is stored as a Site secret. The public service requires the operator's PC awake and connected. Browser-local editing/export remain available when it is offline.
 
 The anonymous HttpOnly, SameSite cookie maps server-side to a session. Origin and CSRF checks protect job creation. Worker claim and completion require a service credential; jobs are claimed once, late/repeated completion is rejected, and no browser can claim another visitor's work.
 
-Current text, undo history (up to 20 revisions) and editing choices are device-local browser storage, not cross-device accounts. Live inference sends the current document and editing context through D1 and the PC to AgentRouter. Do not enter sensitive writing. Queue input is cleared after claim and results after delivery/timeout; abandoned rows are cleaned on subsequent activity after 120 seconds. This is request-driven operational cleanup, not a guarantee about provider logs, database backups or forensic erasure. Local AI storage retains attempt timestamps/client runtime state; private worker diagnostics retain only allowlisted event/error categories, not document text or raw responses. Provider retention is outside this prototype's control.
+Current text, undo history (up to 20 revisions) and editing choices are device-local browser storage, not cross-device accounts. Live inference sends the current document and editing context through D1 and the PC to Cerebras. Do not enter sensitive writing. Queue input is cleared after claim and results after delivery/timeout; abandoned rows are cleaned on subsequent activity after 120 seconds. This is request-driven operational cleanup, not a guarantee about provider logs, database backups or forensic erasure. Local AI storage retains attempt timestamps/client runtime state; private worker diagnostics retain only allowlisted event/error categories, not document text or raw responses. Provider retention is outside this prototype's control.
 
 The prototype performs real document changes and downloads. It does not send emails, publish articles, connect to a production CMS, grade coursework, or make automatic factual judgments.
 
