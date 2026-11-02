@@ -1,0 +1,58 @@
+{
+  "at": "2026-11-02T09:16:57.228Z",
+  "provider": "Cerebras",
+  "model": "gpt-oss-120b",
+  "credentialSource": "New operator-selected private key file; no credential contents or personal file paths published.",
+  "tests": {
+    "passed": 36,
+    "failed": 0,
+    "scope": "Local regression tests with injected provider responses; separate from genuine model evidence."
+  },
+  "local": {
+    "name": "imprint",
+    "ok": true,
+    "model": "gpt-oss-120b",
+    "usage": {
+      "inputTokens": 534,
+      "outputTokens": 208,
+      "cacheReadTokens": 0
+    },
+    "decision": "edit",
+    "patchApplied": true,
+    "protectedOpeningPreserved": true,
+    "elapsedMs": 584
+  },
+  "previousLocalAttempts": [
+    {
+      "name": "imprint",
+      "ok": false,
+      "code": "client_request_failed",
+      "message": "Cerebras is rate-limiting requests. No automatic retry was made.",
+      "elapsedMs": 313
+    }
+  ],
+  "publicVerification": {
+    "name": "imprint",
+    "ok": true,
+    "model": "gpt-oss-120b",
+    "usage": {
+      "inputTokens": 534,
+      "outputTokens": 186,
+      "cacheReadTokens": 0
+    },
+    "decision": "edit",
+    "patchAppliedInMemory": true,
+    "protectedOpeningPreserved": true,
+    "staleVersionRefused": true,
+    "elapsedMs": 5104
+  },
+  "deployment": {
+    "name": "imprint",
+    "project_id": "appgprj_6ad3a11db4948191ae40588367f86357",
+    "version_id": "appgprj_6ad3a11db4948191ae40588367f86357~appgver_7cbacf0355688191baf3395450df3086",
+    "deployment_id": "appgdep_6ae853b6bbd88191b9b6508451a5b811",
+    "status": "succeeded",
+    "url": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+    "commit_sha": "0a0ee8fa750b13323104686c7a159f4b1ee16116"
+  }
+}
