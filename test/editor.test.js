@@ -24,7 +24,7 @@ test('only the approved Cerebras provider and model are accepted',()=>{assert.th
 
 test('Cerebras ignores legacy Sol and Astra settings without changing the shared environment',()=>{
  const shared={AGENTROUTER_MODEL:'gpt-6.1-sol',IMPRINT_MODEL:'gpt-6-astra'};
- assert.equal(configuration(shared).model,'gpt-oss-120b');assert.equal(shared.AGENTROUTER_MODEL,'gpt-6.1-sol');
- assert.equal(configuration({}).model,'gpt-oss-120b');
+ assert.equal(configuration(shared).model,'qwen-3.8-27b');assert.equal(shared.AGENTROUTER_MODEL,'gpt-6.1-sol');
+ assert.equal(configuration({}).model,'qwen-3.8-27b');
  assert.throws(()=>configuration({...shared,CEREBRAS_MODEL:'unapproved'}),{code:'invalid_configuration'});
 });

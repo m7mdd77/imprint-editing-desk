@@ -1,0 +1,50 @@
+{
+  "at": "2026-11-05T06:58:38.317Z",
+  "provider": "Cerebras",
+  "model": "qwen-3.8-27b",
+  "currentPrivateKeyReferencePreserved": true,
+  "tests": {
+    "passed": 36,
+    "failed": 0,
+    "scope": "Local regression tests with injected responses, separate from actual model calls."
+  },
+  "local": {
+    "name": "imprint",
+    "ok": true,
+    "model": "qwen-3.8-27b",
+    "usage": {
+      "inputTokens": 548,
+      "outputTokens": 129,
+      "cacheReadTokens": 0
+    },
+    "decision": "edit",
+    "patchApplied": true,
+    "protectedOpeningPreserved": true,
+    "elapsedMs": 486
+  },
+  "previousLocalAttempts": [],
+  "publicVerification": {
+    "name": "imprint",
+    "ok": true,
+    "model": "qwen-3.8-27b",
+    "usage": {
+      "inputTokens": 548,
+      "outputTokens": 124,
+      "cacheReadTokens": 0
+    },
+    "decision": "edit",
+    "patchAppliedInMemory": true,
+    "protectedOpeningPreserved": true,
+    "staleVersionRefused": true,
+    "elapsedMs": 3088
+  },
+  "deployment": {
+    "name": "imprint",
+    "project_id": "appgprj_6ad3a11db4948191ae40588367f86357",
+    "version_id": "appgprj_6ad3a11db4948191ae40588367f86357~appgver_7cbacf0355688191baf3395450df3086",
+    "deployment_id": "appgdep_6aec280da46c8191963fd129fbf5ee74",
+    "status": "succeeded",
+    "url": "https://imprint-editing-desk.choggyacc.chatgpt.site",
+    "commit_sha": "0a0ee8fa750b13323104686c7a159f4b1ee16116"
+  }
+}
